@@ -14,7 +14,8 @@ validate-circle:
 run-circleci-local:
 	circleci local execute
 
-lint:
+lint:	
+	hadolint Dockerfile
 	pylint --disable=R,C main.py
 
 all: install lint test
